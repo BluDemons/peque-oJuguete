@@ -1,0 +1,29 @@
+{
+  "books":[
+    {
+      "id": 1,
+      "title": "De la luna a las estrellas",
+      "author": "Anónimo"
+    },
+    {
+      "id": 2,
+      "title": "Cuidades de papel",
+      "author": "John Green"
+    },
+    {
+      "id": 3,
+      "title": "Neon",
+      "author": "John Kennedy Toole"
+    },
+    {
+      "id": 4,
+      "title": "Clean Code",
+      "author": "Robert C.Martin"
+    },
+    {
+      "id": 5,
+      "title": "Soft Skills",
+      "author": "John Z. Sonmez"
+    }
+  ]
+}
