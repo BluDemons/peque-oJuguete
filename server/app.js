@@ -1,8 +1,6 @@
 const express = require("express");
-
 const bodyParser = require("body-parser");
-
-const books = require("./rutas/books");
+const empresas = require("./empresa/empresa");
 const cors = require("cors");
 
 const PORT = 4000;
@@ -13,10 +11,15 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get("/", (req, res) => {
-  res.send("Bienvenidos al Yavirac!");
+app.get("/api/procesar", (req, res) => {
+const fedex= new empresas();
+const correos= new empresas();
+const servi= new empresas();
+res.json(fedex.Fedex());
+res.json(correos.CorreosDelEcuador());
+res.json(servi.ServiEntrega());
 });
-app.use("/api", books);
+
 
 app.listen(PORT, () => {
   console.log(`Servidor en el puerto: ${PORT}`);

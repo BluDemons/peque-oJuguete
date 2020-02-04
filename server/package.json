@@ -4,7 +4,7 @@
   "description": "API REST con MySQL",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./app.js",
+    "start": "nodemon ./app.js"
   },
   "repository": {
     "type": "git",
