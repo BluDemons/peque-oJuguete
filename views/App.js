@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
-import EventList from './EventList';
+import Pedidos from './Pedidos';
 
 class reactTutorialApp extends Component {
    render() {
       return (
-         <EventList />
+         <Pedidos />
       )
    }
 }
 export default reactTutorialApp
-//AppRegistry.registerComponent('reactTutorialApp', () => reactTutorialApp)
