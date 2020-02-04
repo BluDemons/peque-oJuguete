@@ -12,12 +12,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/api/procesar", (req, res) => {
-const fedex= new empresas();
-res.json(fedex.Fedex()[1]);
-res.json(fedex.Fedex()[0]);
-res.json(fedex.Fedex()[2]);
+const empresa= new empresas();
+res.json(empresa.entidad());
 });
-
 
 app.listen(PORT, () => {
   console.log(`Servidor en el puerto: ${PORT}`);
