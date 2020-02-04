@@ -13,11 +13,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get("/api/procesar", (req, res) => {
 const fedex= new empresas();
-const correos= new empresas();
-const servi= new empresas();
-res.json(fedex.Fedex());
-res.json(correos.CorreosDelEcuador());
-res.json(servi.ServiEntrega());
+res.json(fedex.Fedex()[1]);
+res.json(fedex.Fedex()[0]);
+res.json(fedex.Fedex()[2]);
 });
 
 
