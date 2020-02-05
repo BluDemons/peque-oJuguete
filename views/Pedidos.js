@@ -1,25 +1,36 @@
 import React, { Component } from "react";
 import { StyleSheet, Image, Text, View, TouchableHighlight, ScrollView } from "react-native";
-
+import Axios from "axios";
+const API_URL = "http://192.168.0.9:4000/api/procesar";
 export default class Pedidos extends Component {
   state = {
-    pedidos: {},
-    count: {}
+ Fedex:[],
+ correosEcuador:[],
+ Servientrega:[],
   };
 
   fedex = () => {
-    this.setState({
-      count: this.state.count + 1
+    Axios.get(API_URL)
+    .then(res=>{
+      const dataFedex=res.data;
+      this.setState({dataFedex});
+      alert(JSON.stringify(dataFedex[0]))
     })
   }
   correosEcuador = () => {
-    this.setState({
-      count: this.state.count + 1
+    Axios.get(API_URL)
+    .then(res=>{
+      const dataCorreos=res.data;
+      this.setState({dataCorreos});
+      alert(JSON.stringify(dataCorreos[1]))
     })
   }
   serviEntrega = () => {
-    this.setState({
-      count: this.state.count + 1
+    Axios.get(API_URL)
+    .then(res=>{
+      const dataservi=res.data;
+      this.setState({dataservi});
+      alert(JSON.stringify(dataservi[2]))
     })
   }
 
